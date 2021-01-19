@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+// Primary Color
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// Nuetral
+$dark-blue:hsl(234, 12%, 34%); 
+$grayish-blue:hsl(229, 6%, 66%); 
+$light-gray:hsl(0, 0%, 98%); 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins',sans-serif;
+  color:$dark-blue;
+  
+}
+
+h1{
+  font-size: 5rem;
+  font-weight: 200;
+}
+h2{
+ font-size: 4rem;
+ font-weight: 600;
+}
+p {
+  margin-top: 1rem;
+  color: $grayish-blue;
+ font-size: 1.5rem;
+ font-weight: 400;
+}
+
+.App {
+  margin: 4rem 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ header {
+   text-align: center;
+ }
+
+ section {
+   height:auto;
+   margin:3rem 0;
+   padding:1rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+    grid-template-areas: 
+    "card1 card3 card2" 
+    "card1 card4 card2";
+    align-items: center;
+    grid-gap: 2rem;
+    & > div {
+     border-top: 0.2rem solid white;
+     border-radius: 1rem;
+     padding:2rem;
+     background-color: white;
+     box-shadow: 3px 3px 18px 3px rgba(0,0,0,0.08);
+     h3 {
+       font-size:1.6rem;
+       font-weight: 600;
+     }
+     p{
+       font-size: 1.3rem;
+     }
+   }
+
+   .card1 {
+    border-top-color: $blue;
+    grid-area: card1;
+  }
+  .card2 {
+    border-top-color: $red;
+    grid-area: card2;
+    
+  }
+  .card3 {
+    border-top-color: $orange;
+    grid-area: card3;
+    align-self: end;
+  }
+  .card4 {
+    border-top-color: $cyan;
+    grid-area: card4;
+    align-self: start;
+  }
+ }
+}
+
+.img {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: end;
+  img{
+    width: 20%;
+  }
+}
+
+@media(max-width:800px) {
+  .App {
+   header {
+     text-align: center;
+     h1{
+      font-size: 3rem;
+     }
+     h2{
+      font-size: 3rem;
+     }
+     p {
+      font-size: 1.4rem;
+     }
+   }
+  
+   section {
+     height:auto;
+     grid-template-columns: 1fr;
+      grid-template-areas: 
+      "card1" 
+      "card3"
+      "card4"
+      "card2";
+      & > div {
+        h3 {
+         font-size:1.6rem;
+       }
+       p{
+         font-size: 1.2rem;
+       }
+     }
+  
+    .card3 {
+      align-self: unset;
+    }
+    .card4 {
+      align-self: unset;
+    }
+   }
+  }
+  
+  .img {
+    img{
+      width: 15%;
+    }
+  }
+  
+}
+
+.attribution {margin: 1rem 0 ; font-size: 1.1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
