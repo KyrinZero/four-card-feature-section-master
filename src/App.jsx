@@ -60,7 +60,11 @@ export default function App() {
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
             Frontend Mentor
           </a>
-          . Coded by <a href="/">Bayajit Mohammed</a>.
+          . Coded by{" "}
+          <a href="https://github.com/KyrinZero/four-card-feature-section-master">
+            Bayajit Mohammed
+          </a>
+          .
         </p>
       </footer>
     </>
